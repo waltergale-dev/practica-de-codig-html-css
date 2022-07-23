@@ -2,7 +2,7 @@
 :root {
   --verde: #0c443a;
   --limon: #25d1b2;
-  --degradado: linear-gradient (90deg, var(--limon) ,var(--verde)) ;
+  --degradado: linear-gradient(90deg,var(--limon),var(--verde));
 }
 
 * {
@@ -15,6 +15,7 @@
   outline: none;
   border: none;
   text-transform: capitalize;
+  background: linear-gradient();
 }
 
 *::-moz-selection {
@@ -34,6 +35,29 @@ html {
 
 body {
   background: #f5f5f5;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+  padding-bottom: 2rem;
+}
+
+.inicio .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background: var(--degradado);
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 /* estillos header */
@@ -61,9 +85,10 @@ header .logo span {
   color: var(--limon);
 }
 
-header .navbar {
+header .navbar a {
   font-size: 1.8rem;
   color: var(--verde);
+  padding: 0 0.7rem;
 }
 
 header .navbar a:hover {
@@ -82,6 +107,54 @@ header label {
   opacity: 0;
 }
 
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/src/img/inicio_fondo.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.inicio .image img {
+  width: 40vw;
+  -webkit-animation: float 4s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(-8rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-8rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+.inicio .conten h3 {
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.inicio span {
+  color: var(--limon);
+  text-transform: uppercase;
+}
+
+.inicio .conten p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -98,12 +171,13 @@ header label {
     left: 0;
     width: 100%;
     color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.925);
     padding: 1rem 2rem;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     transform-origin: top;
     transform: scaleY(0);
-    transition-duration: 0.3s;
+    transition: 0.2s linear;
     opacity: 0;
   }
   header .navbar a {
@@ -119,8 +193,21 @@ header label {
   header input:checked ~ label::before {
     content: "\f00d";
   }
+  .inicio {
+    flex-flow: column-reverse;
+  }
+  .inicio .image {
+    width: 100%;
+    text-align: center;
+  }
+  .inicio .conten h3 {
+    font-size: 3.6rem;
+  }
+  .inicio .conten p {
+    font-size: 1.5rem;
+  }
 }
-@media (max-width: 768px) and (min-width: 450px) {
+@media (min-width: 450px) {
   html {
     font-size: 49%;
   }
