@@ -30,7 +30,7 @@
 
 html {
   font-size: 62.4%;
-  overflow: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -129,6 +129,13 @@ header label {
   background-position: center;
 }
 
+.acerca-de .columna img {
+  width: 30vw;
+  padding-top: 5rem;
+  -webkit-animation: float 4s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
+}
+
 .inicio .image img {
   width: 40vw;
   -webkit-animation: float 4s ease-in-out infinite;
@@ -170,7 +177,7 @@ header label {
 }
 
 .detalles {
-  margin-top: 13rem;
+  margin-top: 5rem;
 }
 
 .detalles .caja-contenedor {
@@ -184,8 +191,8 @@ header label {
   flex: 1 1 30rem;
   background: white;
   border-radius: 2rem;
-  border: 1rem solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.3rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0.7rem 0.2rem 3rem -0.8rem rgba(0, 0, 0, 0.47);
   margin: 1.5rem;
   padding: 2rem 3rem;
   text-align: center;
@@ -209,8 +216,8 @@ header label {
 
 .acerca-de {
   background: url(../img/blob.svg) no-repeat;
-  background-position: left;
-  background-size: 130rem;
+  background-position: -35rem;
+  background-size: 90rem;
   padding-bottom: 3rem;
   padding-top: 3rem;
   margin-top: 13rem;
@@ -245,6 +252,306 @@ header label {
 
 .acerca-de .columna .conten .botones a:last-child {
   margin-left: 2rem;
+}
+
+.suscribete {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: url(../img/fondo_sub.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.suscribete h3 {
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.suscribete p {
+  color: whitesmoke;
+  font: size 1.6rem;
+  margin: 2rem auto;
+  width: 70rem;
+}
+
+.suscribete form {
+  display: flex;
+  justify-content: space-around;
+  max-width: 70rem;
+  border: 0.2rem solid whitesmoke;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  margin: 2rem auto;
+  height: 5.5rem;
+}
+
+.suscribete form input[type=email] {
+  padding: 0 2rem;
+  font-size: 1.7rem;
+  background: none;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+}
+
+input[type=email]::-moz-placeholder {
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+
+input[type=email]:-ms-input-placeholder {
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+
+input[type=email]::placeholder {
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+
+.suscribete form input[type=submit] {
+  background-color: #ffffff;
+  width: 20rem;
+  font-size: 1.7rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.suscribete form input[type=submit]:hover {
+  color: var(--limon);
+}
+
+.caja-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.opiniones .caja-contenedor .caja {
+  flex: 1 1 30rem;
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  border: 0.3rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0.7rem 0.2rem 3rem -0.8rem rgba(0, 0, 0, 0.47);
+  border-radius: 0.5rem;
+}
+.opiniones .caja-contenedor .caja .user h3 {
+  color: var(--verde);
+  font-size: 2rem;
+}
+.opiniones .caja-contenedor .caja .user .star i {
+  color: var(--verde);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.opiniones .caja-contenedor .caja .comentarios p {
+  color: #666;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.opiniones .caja-contenedor .caja .fa-headphones-simple {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: var(--limon);
+  opacity: 0.5;
+}
+
+.opiniones .caja-contenedor .caja .user img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 2rem;
+}
+
+.precios .caja-contenedor {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.precios .caja-contenedor .caja {
+  flex: 1 1 25rem;
+  margin: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.precios .caja-contenedor .caja ul {
+  list-style: none;
+  padding: 2rem 0;
+}
+.precios .caja-contenedor .caja ul li {
+  text-align: left;
+  padding: 0.4rem 0;
+  font-size: 1.7rem;
+  color: #333;
+}
+.precios .caja-contenedor .caja ul li .fa-check {
+  color: rgb(162, 235, 162);
+}
+.precios .caja-contenedor .caja ul li .fa-xmark {
+  color: #f04d4d;
+}
+
+.precios .caja-contenedor .caja .titulo {
+  color: var(--verde);
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+.precios .caja-contenedor .caja .tipos {
+  font-size: 4rem;
+  color: var(--limon);
+  padding: 1rem 0;
+}
+.precios .caja-contenedor .caja .tipos span {
+  font-size: 2rem;
+}
+
+.contactos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+.contactos .image {
+  flex: 1 1 30rem;
+}
+.contactos .image img {
+  width: 100%;
+  padding: 2rem;
+}
+
+.contactos form {
+  flex: 1 1 30rem;
+  padding: 2rem 3rem;
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+.contactos form .input-caja {
+  position: relative;
+}
+
+.contactos .heading {
+  text-align: left;
+  padding: 0;
+  padding-bottom: 2rem;
+}
+
+.contactos form .input-caja input, .contactos form .input-caja textarea {
+  width: 100%;
+  color: #333;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
+  text-transform: none;
+}
+
+.contactos form .input-caja textarea {
+  resize: none;
+  height: 13rem;
+}
+
+.contactos form .input-caja label {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  font-size: 1.7rem;
+  color: #666;
+  transition: 0.2s linear;
+}
+
+.contactos form .input-caja input:focus ~ label,
+.contactos form .input-caja input:valid ~ label,
+.contactos form .input-caja textarea:focus ~ label,
+.contactos form .input-caja textarea:valid ~ label {
+  top: -0.5rem;
+  font-size: 2.1rem;
+  color: var(--limon);
+}
+
+.footer {
+  padding-top: 7rem;
+  background: url(/src/img/footer-fondo.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer .caja-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .caja-contenedor .caja {
+  flex: 1 1 30rem;
+  margin: 2rem;
+}
+.footer .caja-contenedor .caja h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: wheat;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.footer .caja-contenedor .caja p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.footer .caja-contenedor .caja a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  color: #ffffff;
+}
+
+.footer .caja-contenedor .caja a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.footer .caja-contenedor .caja .info {
+  display: flex;
+  align-items: center;
+}
+.footer .caja-contenedor .caja .info i {
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--verde);
+  font-size: 2.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+}
+
+.footer .creditos {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  border-top: 0.1rem solid #ffffff;
+  padding: 2.5rem 1rem;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -294,6 +601,8 @@ header label {
   }
   .inicio {
     flex-flow: column-reverse;
+    padding-top: 14rem;
+    padding-bottom: 18rem;
   }
   .inicio .image {
     width: 100%;
@@ -308,6 +617,9 @@ header label {
   .acerca-de {
     background-position: center;
   }
+  .suscribete p {
+    width: auto;
+  }
 }
 @media (max-width: 450px) {
   html {
@@ -321,8 +633,11 @@ header label {
   .acerca-de .columna .conten .botones a:last-child {
     margin: 1rem 0;
   }
-  .acerca-de {
+  .acerca-de .columna .conten .botones a:last-child .acerca-de {
     background-position: top;
     background-size: 70rem;
+  }
+  .acerca-de .columna .conten .botones a:last-child .acerca-de .columna img {
+    width: 50vw;
   }
 }/*# sourceMappingURL=style.css.map */
