@@ -120,6 +120,7 @@ header label{
     background: url(../img/inicio_fondo.png) no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 7rem;
    
 }
 
@@ -156,7 +157,7 @@ header label{
 }
 .inicio .conten span{
     color: var(--limon);
-    text-transform: uppercase;        
+    text-transform: capitalize;        
 }
 .inicio .conten p{
     font-size: 1.8rem;
@@ -165,6 +166,7 @@ header label{
 }
 .detalles{
     margin-top: 5rem;
+    padding-bottom:-120rem ;
 
 }
 .detalles .caja-contenedor{
@@ -202,11 +204,21 @@ header label{
         padding: 1rem 0;
        
 }
+
+.detalles{
+    background:url(../img/blob-car.svg) no-repeat ;
+    background-position: 25rem;
+    background-size: 90rem;
+    padding-bottom: 13rem;
+    padding-top: 3rem;
+    margin-top: 13rem;
+    
+}
 // section acerca de
 
 .acerca-de{
     background:url(../img/blob.svg) no-repeat ;
-    background-position: -35rem;
+    background-position: -25rem;
     background-size: 90rem;
     padding-bottom: 3rem;
     padding-top: 3rem;
@@ -214,7 +226,7 @@ header label{
     
     .columna{
         img{
-            max-width: 430px;
+            width: 110%;
         }
     }
 
@@ -318,7 +330,15 @@ input[type="email"]::placeholder{
     flex-wrap: wrap;
 
 }
+.opiniones{
+    background:url(../img/blob-car-2.svg) no-repeat ;
+    background-position: 25rem;
+    background-size: 115rem;
+    padding-bottom: 13rem;
+    padding-top: 3rem;
+    margin-top: 13rem;
 
+}
 .opiniones .caja-contenedor .caja{
     flex: 1 1 30rem;
     background: white;
@@ -379,8 +399,8 @@ input[type="email"]::placeholder{
         margin: 1rem;
         padding: 1rem;
         background: #ffffff;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0 .5rem 1rem rgb(0, 0, 0,.2);
+        border: 1px solid rgba(173, 172, 172, 0.5);
+        box-shadow: 1rem .5rem 1rem rgb(0, 0, 0,.2);
         border-radius: 3px;
         text-align: center;
         padding-bottom: 3rem;
@@ -437,7 +457,7 @@ input[type="email"]::placeholder{
 .contactos form{
     flex: 1 1 30rem;
     padding: 2rem 3rem;
-    border: .1px solid rgba(0,0,0,.2);
+    border: 1px solid rgba(0,0,0,.2);
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0,.1);
     border-radius: .5rem;
     background-color: #ffffff;
@@ -459,7 +479,8 @@ input[type="email"]::placeholder{
     margin: 1.5rem 0;
     padding: .5rem 0;
     font-size: 1.7rem;
-    border-bottom: .2rem solid rgb(0, 0, 0,.1);
+    border:none;
+    border-bottom:.1rem solid rgba(0,0,0,.2);
     text-transform: none;
 }
 .contactos form .input-caja textarea{
@@ -473,6 +494,7 @@ input[type="email"]::placeholder{
         font-size: 1.7rem;
         color: #666;
         transition: .2s linear;
+
 }
     
 
